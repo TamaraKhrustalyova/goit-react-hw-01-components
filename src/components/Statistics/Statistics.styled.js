@@ -39,8 +39,8 @@ export const StatEl = styled.li`
                 return  'rgb(213, 39, 9)';
             case '.psd':
                 return 'rgb(68, 128, 232)';
-            case '.pdf':
-                return 'rgb(213, 152, 9)';
+            // case '.pdf':
+            //     return 'rgb(213, 152, 9)';
             default:
                 return 'black';
         }
