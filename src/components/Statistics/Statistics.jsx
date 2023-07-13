@@ -7,7 +7,7 @@ export const Statistics = ({title, stats}) => {
               {title && <StatsTitle>{title}</StatsTitle>}
               <StatsData>
                 {stats.map(({ id, label, percentage }) => {
-                    return <StatEl key={id}>
+                    return <StatEl key={id} docType={label}>
                                 <StatDocType>{label} </StatDocType>
                                 <StatPercentage>{percentage}%</StatPercentage>
                             </StatEl>
