@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import {FriendItem, Status, FriendName} from './FriendListItem.styled'
 
 
-export const Friend = ({avatar, name, isOnline, id}) => {
+export const Friend = ({data}) => {
+    const {avatar, name, isOnline, id} = data
     return  <FriendItem key={id}>
                 <Status isOnline={isOnline}></Status>
                 <img src={avatar} alt={name} width="48" />
@@ -12,8 +13,7 @@ export const Friend = ({avatar, name, isOnline, id}) => {
 
 
 Friend.propTypes = {
-    avatar: PropTypes.string,
-    name: PropTypes.string,
-    isOnline: PropTypes.bool,
-    id: PropTypes.number,
+    avatar: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
 };
